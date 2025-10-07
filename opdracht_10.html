@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> wat er fout is aan de code Een < ol> mag niet direct als kind van < ul>.
+
+    Alleen < li>-elementen mogen direct binnen < ul> staan.
+
+        De geneste < ol> zit buiten een < li>, maar hoort binnen een < li> te staan.
+
+            In HTML moet het dus zo zijn: een geneste lijst zit altijd binnen een < li>. </p>
+<ul>
+    <li>een</li>
+    <li>twee
+        <ol>
+            <li>jan</li>
+            <li>piet</li>
+            <li>joris</li>
+        </ol>
+    </li>
+    <li>vier</li>
+    <p> De correctie is =De < ol> staat nu binnen het < li> met “twee”.
+
+    Zo is de structuur correct: < ul> bevat alleen < li>-elementen, en geneste lijsten staan binnen een < li>.</p>
+</ul>
+</body>
+</html>
