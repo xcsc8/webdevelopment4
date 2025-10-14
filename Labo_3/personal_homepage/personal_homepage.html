@@ -3,79 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persoonlijke Pagina van Thiemen Degreef</title>
+    <title>Persoonlijke Pagina van Thiemen Degreef (Simpel)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Header -->
-<header>
+
+<header style="text-align: center;">
     <h1>Thiemen Degreef</h1>
     <p>Mijn Persoonlijke Profiel</p>
 </header>
 
 <hr>
 
-<!-- Sectie 1: Persoonlijke Gegevens -->
-<section>
-    <h2>Persoonlijke Gegevens</h2>
 
-    <!-- Profielfoto (Met simpele placeholder en afmetingen) -->
-    <img src="C:\Users\Thiem\Documents\GitHub\webdevelopment\Labo_3\images" alt="thiemen.jpg"
+<main>
 
-         width="150"
-         height="150">
 
-    <p><strong>Volledige naam:</strong> Thiemen Degreef</p>
-    <p><strong>Adres:</strong> Fictiestraat 123, 8800 Roeselare</p>
-    <p><strong>Telefoonnummer:</strong> 0499 12 34 56</p>
-    <p><strong>E-mailadres:</strong> <a href="mailto:thiemen@example.com">thiemen@example.com</a></p>
-</section>
+    <section id="persoonlijke-gegevens">
+        <h2>Persoonlijke Gegevens</h2>
 
-<hr>
+        <figure style="text-align: center;">
+            <img src="https://placehold.co/150x150/cccccc/333333?text=TD"
+                 alt="Portretfoto van Thiemen Degreef"
+                 width="150"
+                 height="150"
+                 style="border-radius: 50%;">
+            <figcaption style="font-size: small; margin-top: 5px;">Portret van Thiemen Degreef (Placeholder)</figcaption>
+        </figure>
 
-<!-- Sectie 2: Hobby's en Interesses -->
-<section>
-    <h2>Hobby's en Interesses</h2>
+        <p><strong>Volledige naam:</strong> Thiemen Degreef</p>
+        <p><strong>Adres:</strong> Fictiestraat 123, 8800 Roeselare</p>
+        <p><strong>Telefoonnummer:</strong> 0499 12 34 56</p>
+        <p><strong>E-mailadres:</strong> <a href="mailto:thiemen@example.com">thiemen@example.com</a></p>
+    </section>
 
-    <ul>
-        <!-- Hobby 1: Motoren -->
-        <li>
-            <h3>🛠️ Motoren Sleutelen</h3>
-            <p>Ik hou ervan om in mijn vrije tijd bezig te zijn met motoren, vooral de Rieju AM6.</p>
-            <img src="https://placehold.co/300x100/818CF8/FFFFFF?text=Motor+Sleutelen" alt="Afbeelding van een motorblok">
-            <p><a href="https://www.manualslib.com/products/Rieju-Motor-Am6-3653240.html" target="_blank">Handleiding Rieju AM6</a></p>
-        </li>
 
-        <!-- Hobby 2: Mountainbiken -->
-        <li>
-            <h3>🚵 Mountainbiken</h3>
-            <p>Ik deed vroeger veel aan mountainbiken en zoek graag nieuwe routes op.</p>
-            <img src="https://placehold.co/300x100/10B981/FFFFFF?text=MTB+Trail" alt="Afbeelding van mountainbiken">
-            <p><a href="https://www.komoot.com/nl-nl/guide/558/mtb-routes-in-belgie" target="_blank">MTB Routes in België</a></p>
-        </li>
+    <section id="prognose-tabel">
+        <h2>Prognose Studieresultaten</h2>
+        <p>Voorspelde scores (op 20) voor een selectie van vakken voor mezelf en medestudenten. </p>
 
-        <!-- Hobby 3: Gaming (CS2) -->
-        <li>
-            <h3>🎮 Gaming</h3>
-            <p>In mijn vrije tijd speel ik graag de game Counter-Strike 2 (CS2).</p>
-            <img src="https://placehold.co/300x100/EF4444/FFFFFF?text=CS2+Gaming" alt="Afbeelding van een game setup">
-            <p><a href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank">Bekijk Counter-Strike 2 op Steam</a></p>
-        </li>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                <tr>
+                    <th>Vak</th>
+                    <th>Thiemen (Voorspelling)</th>
+                    <th>Sarah</th>
+                    <th>Omar</th>
+                    <th>Lies</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Webdevelopment</td>
+                    <td>16/20</td>
+                    <td>14/20</td>
+                    <td>17/20</td>
+                    <td>15/20</td>
+                </tr>
+                <tr>
+                    <td>Databases</td>
+                    <td>14/20</td>
+                    <td>13/20</td>
+                    <td>15/20</td>
+                    <td>16/20</td>
+                </tr>
+                <tr>
+                    <td>Programmeren I</td>
+                    <td>17/20</td>
+                    <td>16/20</td>
+                    <td>16/20</td>
+                    <td>18/20</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-        <!-- Interesse 4: Band -->
-        <li>
-            <h3>🎵 Favoriete Band</h3>
-            <p>Mijn favoriete band is de Amerikaanse pop-rockgroep **Imagine Dragons**.</p>
-            <img src="https://placehold.co/150x50/F59E0B/FFFFFF?text=ID" alt="Logo van Imagine Dragons">
-            <p><a href="https://www.imaginedragonsmusic.com/" target="_blank">Officiële website van de band</a></p>
-        </li>
-    </ul>
-</section>
+
+    <section id="hobbies-interesses">
+        <h2>Hobby's en Interesses</h2>
+
+        <ul>
+    
+            <li>
+                <article>
+                    <h3>🛠️ Motoren Sleutelen</h3>
+                    <p>Ik hou ervan om in mijn vrije tijd bezig te zijn met motoren, vooral de Rieju AM6.</p>
+                    <figure>
+                        <img src="https://placehold.co/300x100/818CF8/FFFFFF?text=Motor+Sleutelen" alt="Afbeelding van een motorblok">
+                        <figcaption style="font-size: small;">Een motorblok in detail.</figcaption>
+                    </figure>
+                    <p><a href="https://www.manualslib.com/products/Rieju-Motor-Am6-3653240.html" target="_blank">Handleiding Rieju AM6</a></p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3>🚵 Mountainbiken</h3>
+                    <p>Ik deed vroeger veel aan mountainbiken en zoek graag nieuwe routes op.</p>
+                    <figure>
+                        <img src="https://placehold.co/300x100/10B981/FFFFFF?text=MTB+Trail" alt="Afbeelding van mountainbiken">
+                        <figcaption style="font-size: small;">Een uitdagende MTB trail.</figcaption>
+                    </figure>
+                    <p><a href="https://www.komoot.com/nl-nl/guide/558/mtb-routes-in-belgie" target="_blank">MTB Routes in België</a></p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3>🎮 Gaming</h3>
+                    <p>In mijn vrije tijd speel ik graag de game Counter-Strike 2 (CS2).</p>
+                    <figure>
+                        <img src="https://placehold.co/300x100/EF4444/FFFFFF?text=CS2+Gaming" alt="Afbeelding van een game setup">
+                        <figcaption style="font-size: small;">Een typische gaming setup.</figcaption>
+                    </figure>
+                    <p><a href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank">Bekijk Counter-Strike 2 op Steam</a></p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3>🎵 Favoriete Band</h3>
+                    <p>Mijn favoriete band is de Amerikaanse pop-rockgroep **Imagine Dragons**.</p>
+                    <figure>
+                        <img src="https://placehold.co/150x50/F59E0B/FFFFFF?text=ID" alt="Logo van Imagine Dragons">
+                        <figcaption style="font-size: small;">Logo van de band.</figcaption>
+                    </figure>
+                    <p><a href="https://www.imaginedragonsmusic.com/" target="_blank">Officiële website van de band</a></p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+</main>
 
 <!-- Footer -->
 <footer>
     <hr>
-    <p><small>&copy; 2025 Thiemen Degreef.</small></p>
+    <p style="text-align: center; font-size: small;">&copy; 2025 Thiemen Degreef. Alle rechten voorbehouden.</p>
 </footer>
 
 </body>
