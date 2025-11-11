@@ -1,0 +1,83 @@
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+
+.section {
+    padding: 30px;
+}
+
+
+#header {
+    background-color: #2B2D42;
+    color: #EDF2F4;
+    margin-bottom: 10px;
+}
+
+#header h1 {
+    font-size: 80px;
+    color: #EDF2F4;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#header h2 {
+    font-size: 40px;
+    color: #EDF2F4;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#header p {
+    color: #8D99AE;
+}
+
+
+#education {
+    background-color: #8D99AE;
+    color: #2B2D42;
+}
+
+#education h2 {
+    font-size: 40px;
+    color: #2B2D42;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#education h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+#education p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+
+#footer {
+    background-color: #2B2D42;
+    color: #8D99AE;
+    margin-top: 10px;
+}
+
+#footer h2 {
+    font-size: 40px;
+    color: #EDF2F4;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+a {
+    color: #EF233C;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
