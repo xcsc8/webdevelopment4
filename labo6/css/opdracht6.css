@@ -1,0 +1,22 @@
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+.checklist li::before {
+    content: "\2610";
+    color: #555;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+.checklist li.checked::before {
+    content: "\2611";
+    color: green;
+}
+
+.checklist li.checked {
+    font-weight: bold; 
+}
