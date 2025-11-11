@@ -1,0 +1,14 @@
+a {
+    background-image: url("../images/macdoe.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    padding-left: 16px;
+    display: inline-block;
+}
+
+
+a:link, a:visited {
+    color: chartreuse;
+    text-decoration: none;
+}
