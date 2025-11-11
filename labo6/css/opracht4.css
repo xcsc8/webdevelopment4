@@ -1,0 +1,40 @@
+
+body {
+
+    font-family: Verdana, sans-serif;
+    font-size: 1.1em;
+
+    background-color: #E6E6E6;
+
+    color: #191970;
+    margin: 20px;
+}
+
+
+h1 {
+
+    font-variant: small-caps;
+
+    background-color: #FF0000;
+    color: white;
+    padding: 15px;
+}
+
+
+a:hover {
+
+    border: 2px solid #FFA500;
+    padding: 2px 4px;
+    background-color: #FFFACD;
+    text-decoration: none;
+}
+
+
+.stippeltjesrand {
+
+    border: 1px dotted #555;
+    padding: 10px;
+    margin: 15px 0;
+
+    display: block;
+}
