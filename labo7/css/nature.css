@@ -1,0 +1,7 @@
+section>header {
+    background-image: url("labo7/css/header.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+}
