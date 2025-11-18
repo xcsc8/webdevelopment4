@@ -1,0 +1,138 @@
+/* kalender_styles.css - Exacte Replicatie van Figuur */
+
+/* --- Kleur Definities volgens Figuur --- */
+:root {
+    /* Achtergrondkleuren */
+    --h1-bg: rgb(170, 170, 200); /* Hoofding Maand */
+    --th-bg: rgb(35, 37, 70);    /* Hoofding Dagen */
+    --roze-weekend: rgb(255, 220, 220);
+    --rood-feestdag: rgb(250, 120, 120);
+
+    /* Tekstkleuren */
+    --th-text: rgb(200, 190, 240);
+    --blauw-speciaal: rgb(0, 0, 255); /* Puur blauw voor speciale dagen */
+    --grijs-other-month-text: rgb(160, 160, 160); /* Donkergrijs voor tekst vorige maand */
+    --grijs-next-month-bg: rgb(220, 220, 220); /* Lichtgrijs blokken volgende maand */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Alleen de tabel moet zichtbaar zijn zonder marges */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Kalender Hoofding (December 2025) --- */
+.calendar-header {
+    background-color: var(--h1-bg);
+    width: 320px;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.calendar-header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* --- Kalender Tabel Algemeen --- */
+.calendar-table {
+    border-collapse: collapse;
+    width: 320px;
+    border: 1px solid black;
+}
+
+/* --- Dagen van de Week (thead) --- */
+.calendar-table thead {
+    background-color: var(--th-bg);
+}
+
+.calendar-table th {
+    color: var(--th-text);
+    padding: 8px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid black;
+    border-top: none;
+}
+
+/* --- Cellen (Dagen) --- */
+.calendar-table td {
+    border: 1px dotted black; /* Stippellijn zoals in de figuur */
+    padding: 5px;
+    width: calc(100% / 7);
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.1em;
+    color: black;
+    background-color: white; /* Standaard witte achtergrond */
+    /* De lijnen lijken links en boven dikker, maar we houden het bij 1px dotted */
+}
+
+/* --- 1. WEEKENDEN (Roze Achtergrond) met Pseudo-klassen --- */
+
+/* De eerste kolom (Sunday) */
+.calendar-table td:first-child {
+    background-color: var(--roze-weekend);
+}
+
+/* De laatste kolom (Saturday) */
+.calendar-table td:last-child {
+    background-color: var(--roze-weekend);
+}
+
+/* --- 2. DAGEN VAN VORIGE/VOLGENDE MAAND --- */
+
+/* Vorige maand (30) */
+.calendar-table td.other-month {
+    color: var(--grijs-other-month-text); /* Grijs lettertype */
+    /* De achtergrond moet de roze kleur van het weekend respecteren */
+}
+
+/* Volgende maand (1, 2, 3) - Grijs blok + Grijs lettertype */
+.calendar-table td.next-month {
+    background-color: var(--grijs-next-month-bg);
+    color: var(--grijs-other-month-text);
+}
+
+/* De '3' valt in een roze weekend, maar de grijze achtergrond overschrijft deze in de figuur.
+   We zorgen ervoor dat next-month op de achtergrondkleur wint van :last-child */
+.calendar-table td.next-month:last-child {
+    background-color: var(--grijs-next-month-bg);
+}
+
+
+/* --- 3. SPECIALE DAGEN (Blauw en Onderstreept) --- */
+.calendar-table td.special-day {
+    color: var(--blauw-speciaal);
+    text-decoration: underline;
+}
+
+/* --- 4. FEESTDAGEN (Rood Achtergrond) --- */
+/* De specificiteit moet hoog zijn om het weekendroze te overschrijven */
+.calendar-table td.holiday {
+    background-color: var(--rood-feestdag);
+    color: black; /* Tekst op de rode achtergrond is zwart in de figuur */
+    font-weight: bold;
+    text-decoration: none; /* Verwijder de onderstreping voor de leesbaarheid op rood/zwart */
+}
+
+/* Fix voor de overlapping: Feestdag 5 (vrijdag) en 25 (donderdag) */
+/* De 5 is in de figuur Rood (Feestdag) met Blauwe Tekst en Onderstreping, de 25 ook. */
+
+/* We moeten de achtergrond rood maken, maar de blauwe tekst en onderstreping behouden */
+.calendar-table td.holiday.special-day {
+    background-color: var(--rood-feestdag);
+    color: var(--blauw-speciaal);
+    text-decoration: underline;
+}
+
+/* De 5 valt op een vrijdag (geen weekend), de 25 niet. De achtergrondkleur moet rood zijn en blijft rood. */
