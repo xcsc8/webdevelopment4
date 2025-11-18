@@ -1,0 +1,55 @@
+
+
+.friends-table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+
+.friends-table thead tr {
+    background: var(--accent-kleur);
+    color: var(--donker-grijs);
+    font-size: 1.2em;
+}
+
+.friends-table thead th {
+    padding: 12px 15px;
+    font-weight: bold;
+    text-align: left;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.friends-table thead th:last-child {
+    border-right: none;
+}
+
+
+.friends-table tbody tr {
+
+    background: var(--donker-grijs);
+    color: var(--tekst-licht);
+    transition: background 0.3s;
+}
+
+
+.friends-table tbody tr:nth-child(even) {
+    background: #252525;
+}
+
+
+.friends-table tbody tr:hover {
+    background: #333333;
+}
+
+
+.friends-table tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--grens-kleur);
+    border-right: 1px solid var(--grens-kleur);
+}
+
+.friends-table tbody td:last-child {
+    border-right: none;
+}
