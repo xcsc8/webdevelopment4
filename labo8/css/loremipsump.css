@@ -1,0 +1,20 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+
+.container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.kolom {
+
+    float: left;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid black;
+    
+    box-sizing: border-box;
+}
