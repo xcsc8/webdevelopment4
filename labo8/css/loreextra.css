@@ -6,9 +6,8 @@
 
 
 .column {
-    float: left;            [cite_start]
-width: 50%;             [cite_start]
-
+    float: left;
+width: 50%;          
 
 padding: 10px;
 box-sizing: border-box;
