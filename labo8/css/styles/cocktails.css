@@ -2,7 +2,7 @@
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     font-size: 1.2em;
-    background-image: url('../images/background.gif');
+    background-image: url('labo8/images/background.gif');
     margin: 0;
 }
 
@@ -81,7 +81,7 @@ div.color #guarantee {
 
 footer {
     clear: both;
-    font-size: 50%;       
+    font-size: 50%;
     text-align: center;
     padding: 20px;
 }
