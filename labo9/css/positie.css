@@ -1,5 +1,11 @@
 article{
     border:1px solid black;
+    float:left;
+    margin:10px;
+}
+img{
+    float:left;
+    padding:10px;
 }
 article:nth-child(even) img{
     float:right;
