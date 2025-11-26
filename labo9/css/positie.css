@@ -10,6 +10,6 @@ img{
 article:nth-child(even) img{
     float:right;
 }
-article:nth-child(even) img{
+article:nth-child(odd) img{
     float: left;
 }
