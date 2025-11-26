@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 95%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+
+header.top {
+    height: 200px;
+    background-image: url('../imagesairbus/bgsky3.jpg');
+    background-size: cover;
+    text-align: center;
+    color: darkblue;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-title {
+    font-size: 300%;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0 0 0;
+}
+
+.sub-title {
+    font-size: 240%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.plane-img {
+    position: absolute;
+    right: 250px;
+    bottom: 60px;
+    z-index: 10;
+}
+
+
+aside.news {
+    float: right;
+    width: 25%;
+    background-color: #dddddd;
+    border: 1px solid #999999;
+}
+
+main.main {
+    float: left;
+    width: calc(75% - 10px);
+    margin-right: 10px;
+}
+
+
+aside.news h3 {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-size: 120%;
+    margin: 0;
+    padding: 5px 0;
+}
+
+aside.news p {
+    color: #666666;
+    font-size: 90%;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+
+.introduction {
+    background-color: white;
+    color: black;
+    text-align: justify;
+    padding: 20px 30px 20px 0;
+    overflow: auto;
+}
+
+.introduction .logo {
+    float: left;
+    margin: 20px;
+}
+
+.introduction .highlight {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.gallery {
+    background-color: #999999;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.foto {
+    float: left;
+    width:auto;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    border: 1px dotted #999999;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.foto img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+
+.clear {
+    clear: both;
+}
+
+footer.bottom {
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.block {
+    float: left;
+}
+
+.first-block {
+    margin-left: 120px;
+}
+
+footer.bottom ul {
+    list-style-type: disc;
+}
+
+footer.bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+footer.bottom a:hover {
+    color: red;
+}
+
+
+.copyright {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
