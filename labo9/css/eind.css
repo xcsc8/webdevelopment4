@@ -95,9 +95,10 @@ aside.news p {
 .gallery {
     background-color: #999999;
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,max-content);
     padding: 20px;
     overflow: hidden;
+    gap: 20px;
 }
 
 .foto {
