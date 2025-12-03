@@ -1,6 +1,5 @@
 
 
-
 body {
 	font: 1.2em/1.2 Helvetica, aria, sans-serif;
 	margin: 0 3%;
@@ -33,7 +32,28 @@ figcaption {
 	font-size: .8em;
 }
 
+/*iphone*/
+@media (min-width: 768px){
+    body{ background: white; }
 
-@media  {
-	
 }
+/*ipdad*/
+@media (min-width: 786px ) {
+    body {
+
+        background-color: #ccccff;
+    }
+    figure {
+
+        width: 40%;
+        float: left ;
+    }
+}
+/*desktop*/
+@media (min-width: 992px) {
+    body {background-color: #ccffcc;
+    }
+    figure {
+
+        width: 30%;
+    }}
