@@ -1,0 +1,30 @@
+.row>div {
+    background-color: #abb1b8;
+    min-height: 150px;
+    min-width: 150px;
+    background-clip: content-box;
+}
+
+.row>div:nth-child(odd) {
+    background-color: #dbdfe5;
+
+}
+/*iphone*/
+@media (min-width: 768px){
+
+/*ipdad*/
+@media (min-width: 786px ) {
+
+    figure {
+
+        width: 40%;
+        float: left ;
+    }
+}
+/*desktop*/
+@media (min-width: 992px) {
+
+    figure {
+
+        width: 30%;
+    }}
