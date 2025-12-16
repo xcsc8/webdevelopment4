@@ -1,12 +1,15 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
     grid-auto-rows: minmax(80px, auto);
     margin-bottom: 50px;
 }
-
 
 .container .block {
     padding: 20px;
@@ -19,58 +22,45 @@
     align-items: center;
 }
 
+.block.block1 { background-color: #b03a58; }
+.block.block2 { background-color: #7075a5; }
+.block.block3 { background-color: #7d94c3; }
+.block.block4 { background-color: #9ecbd3; }
 
-.block.block1 {
-    background-color: #b03a58;
-    grid-column: 1 / -1;
-    grid-row: 1;
+.block.block1 { order: 2; }
+.block.block2 { order: 1; }
+.block.block3 { order: 3; }
+.block.block4 { order: 4; }
+
+@media screen and (min-width: 772px) {
+    .block.block1 { order: 1; }
+    .block.block3 { order: 2; }
+    .block.block2 { order: 3; }
+    .block.block4 { order: 4; }
 }
 
+@media screen and (min-width: 992px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+    }
+    .block.block1 { order: 1; }
+    .block.block2 { order: 2; }
+    .block.block3 { order: 3; }
+    .block.block4 { order: 4; }
 
-.block.block2 {
-    background-color: #7075a5;
-    grid-column: 1;
-    grid-row: 2 / span 2;
-}
+    .block.block1 {
+        grid-column: 1 / -1;
+    }
 
+    .block.block2 {
+        grid-column: 1 / -1;
+    }
 
-.block.block3 {
-    background-color: #7d94c3;
-    grid-column: 2;
-    grid-row: 2;
-}
+    .block.block3 {
+        grid-column: 1;
+    }
 
-
-.block.block4 {
-    background-color: #9ecbd3;
-    grid-column: 3;
-    grid-row: 2;
-}
-
-
-.block.block5 {
-    background-color: #c497ca;
-    grid-column: 2 / span 2;
-    grid-row: 3;
-}
-
-
-.block.block6 {
-    background-color: #b03a58;
-    grid-column: 1 / span 2;
-    grid-row: 4;
-}
-
-
-.block.block7 {
-    background-color: #7075a5;
-    grid-column: 3;
-    grid-row: 4;
-}
-
-
-.block.block8 {
-    background-color: #7d94c3;
-    grid-column: 1 / -1;
-    grid-row: 5;
+    .block.block4 {
+        grid-column: 2;
+    }
 }
