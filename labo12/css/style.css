@@ -1,10 +1,97 @@
+/* Basis instellingen en kleuren */
 html {
-    background-color: #333;
-    font-family: helvetica;
+    background-color: #333; /* */
+    font-family: helvetica; /* */
 }
 
+/* Zorgt dat padding de breedte niet breekt */
 * {
-    padding: 10px;
+    padding: 10px; /* */
+    box-sizing: border-box;
 }
 
+body {
+    margin: 5px; /* */
+}
 
+/* Header en Footer styling */
+header, footer {
+    background-color: #ddaa00; /* */
+    text-align: center;
+}
+
+h1 {
+    margin: 0; /* */
+    color: white;
+}
+
+/* Navigatiebalk styling */
+nav {
+    background-color: #ccc; /* */
+    padding: 5px 2px; /* */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Links algemeen */
+a {
+    color: #ddaa00; /* */
+    text-decoration: none;
+}
+
+/* Links in de navigatie */
+nav a {
+    margin: 0 5px; /* */
+    border: 1px solid #ccc; /* */
+    background-color: white;
+    color: #333;
+}
+
+/* Footer links */
+footer a {
+    color: #333;
+}
+
+/* Layout van de inhoud (Main) */
+main {
+    background-color: grey; /* */
+    display: flex;
+    flex-direction: column; /* */
+}
+
+/* De kaarten (divs) binnen main */
+main div {
+    margin: 5px; /* */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Afbeeldingen */
+img {
+    padding: 0; /* */
+    max-width: 100%;
+    display: block;
+}
+
+/* Knoppen in de kaarten */
+main div a {
+    border: 1px solid #333; /* */
+    color: #333;
+    margin-top: auto;
+    display: block;
+}
+
+/* DESKTOP VERSIE: Als het scherm breder is dan 700px */
+@media (min-width: 701px) {
+    /* */
+    main {
+        flex-direction: row; /* */
+    }
+
+    main div {
+        flex: 1;
+    }
+}
