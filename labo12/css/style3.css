@@ -15,9 +15,7 @@ body {
     align-items: center;
 }
 
-
 .card {
-
     background: url('../images/bg-pattern-card.jpg') no-repeat, white;
     background-size: contain;
     border-radius: .5em;
@@ -47,7 +45,6 @@ body {
 .card header div {
     display: inline-block;
 }
-
 
 .card img {
     border-radius: 100%;
