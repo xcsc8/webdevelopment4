@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht 2.13: Man van An (Interactief)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Zoek de sequentie</h2>
+
+    <label for="bronTekst">Jouw tekst:</label>
+    <textarea id="bronTekst" placeholder="Typ of plak hier je tekst..."></textarea>
+
+    <label for="zoekTerm">Zoek naar (bijv. "an"):</label>
+    <input type="text" id="zoekTerm" value="an">
+
+    <button id="btnBereken">Tel voorkomens</button>
+
+    <hr>
+    <div id="result-indexOf" class="result">Resultaat via indexOf: -</div>
+    <div id="result-lastIndexOf" class="result">Resultaat via lastIndexOf: -</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
