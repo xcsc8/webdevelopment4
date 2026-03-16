@@ -7,16 +7,13 @@ const valideerVoornaam = () => {
 
     if (waarde.length === 0) {
         fout.textContent = "verplicht veld";
-        input.className = "ongeldig";
         return false;
     }
     if (waarde.length > 30) {
         fout.textContent = "max. 30 karakters";
-        input.className = "ongeldig";
         return false;
     }
     fout.textContent = "";
-    input.className = "geldig";
     return true;
 };
 
@@ -27,16 +24,13 @@ const valideerFamilienaam = () => {
 
     if (waarde.length === 0) {
         fout.textContent = "verplicht veld";
-        input.className = "ongeldig";
         return false;
     }
     if (waarde.length > 50) {
         fout.textContent = "max. 50 karakters";
-        input.className = "ongeldig";
         return false;
     }
     fout.textContent = "";
-    input.className = "geldig";
     return true;
 };
 
@@ -47,21 +41,18 @@ const valideerGeboortedatum = () => {
 
     if (waarde.length === 0) {
         fout.textContent = "verplicht veld";
-        input.className = "ongeldig";
         return false;
     }
 
     const datumRegex = /^\d{4}-\d{2}-\d{2}$/;
     if (!datumRegex.test(waarde)) {
         fout.textContent = "formaat is niet jjjj-mm-dd";
-        input.className = "ongeldig";
         return false;
     }
 
     const datum = new Date(waarde);
     if (isNaN(datum.getTime())) {
         fout.textContent = "geen geldige datum";
-        input.className = "ongeldig";
         return false;
     }
 
@@ -71,17 +62,14 @@ const valideerGeboortedatum = () => {
 
     if (maand < 1 || maand > 12) {
         fout.textContent = "geen geldige datum";
-        input.className = "ongeldig";
         return false;
     }
     if (dag < 1 || dag > new Date(jaar, maand, 0).getDate()) {
         fout.textContent = "geen geldige datum";
-        input.className = "ongeldig";
         return false;
     }
 
     fout.textContent = "";
-    input.className = "geldig";
     return true;
 };
 
@@ -92,14 +80,12 @@ const valideerEmail = () => {
 
     if (waarde.length === 0) {
         fout.textContent = "verplicht veld";
-        input.className = "ongeldig";
         return false;
     }
 
     const atIndex = waarde.indexOf("@");
     if (atIndex < 1) {
         fout.textContent = "geen geldig email adres";
-        input.className = "ongeldig";
         return false;
     }
 
@@ -108,12 +94,10 @@ const valideerEmail = () => {
 
     if (lokaal.length < 1 || domein.indexOf(".") < 1) {
         fout.textContent = "geen geldig email adres";
-        input.className = "ongeldig";
         return false;
     }
 
     fout.textContent = "";
-    input.className = "geldig";
     return true;
 };
 
@@ -124,21 +108,17 @@ const valideerKinderen = () => {
 
     if (!isGetal(waarde) || waarde.length === 0) {
         fout.textContent = "geen positief getal";
-        input.className = "ongeldig";
         return false;
     }
     if (parseInt(waarde) < 0) {
         fout.textContent = "is te negatief";
-        input.className = "ongeldig";
         return false;
     }
     if (parseInt(waarde) > 99) {
         fout.textContent = "is te groot";
-        input.className = "ongeldig";
         return false;
     }
     fout.textContent = "";
-    input.className = "geldig";
     return true;
 };
 
@@ -149,7 +129,10 @@ document.getElementById("btnValideer").addEventListener("click", () => {
     const v4 = valideerEmail();
     const v5 = valideerKinderen();
 
+    const uitvoer = document.getElementById("uitvoer");
     if (v1 && v2 && v3 && v4 && v5) {
-        alert("Formulier is geldig!");
+        uitvoer.textContent = "Formulier is geldig!";
+    } else {
+        uitvoer.textContent = "Formulier bevat fouten.";
     }
 });
