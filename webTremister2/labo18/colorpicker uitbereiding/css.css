@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#picker-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+#mainSwatch {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 10px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#btnSave {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#savedContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* De bewaarde swatch  */
+.saved-swatch {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    position: relative; /* Nodig voor absolute positionering van de X */
+    cursor: pointer;
+}
+
+/* De delete knop linksboven  */
+.btn-delete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
