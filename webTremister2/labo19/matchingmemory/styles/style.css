@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg:        #0f0f1a;
+    --surface:   #1a1a2e;
+    --accent:    #7c6aff;
+    --accent2:   #ff6b9d;
+    --text:      #e8e8f0;
+    --muted:     #888;
+    --card-w:    120px;
+    --card-h:    120px;
+    --radius:    14px;
+    --gap:       14px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px 48px;
+}
+
+#app { width: 100%; max-width: 620px; }
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex: 1;
+}
+
+#stats {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+#stats strong { color: var(--text); font-size: 1rem; }
+
+#newGameBtn, #overlayBtn {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+#newGameBtn:hover, #overlayBtn:hover { opacity: 0.85; transform: scale(1.03); }
+#newGameBtn:active, #overlayBtn:active { transform: scale(0.97); }
+
+/* SPEELVELD */
+#speelveld {
+    display: grid;
+    grid-template-columns: repeat(4, var(--card-w));
+    gap: var(--gap);
+    justify-content: center;
+}
+
+/* KAART */
+.kaart {
+    width: var(--card-w);
+    height: var(--card-h);
+    perspective: 600px;
+    cursor: pointer;
+}
+
+.kaart-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--radius);
+}
+
+.kaart.omgedraaid .kaart-inner,
+.kaart.gevonden .kaart-inner {
+    transform: rotateY(180deg);
+}
+
+.kaart-voor, .kaart-achter {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.kaart-achter {
+    background: var(--surface);
+    border: 2px solid #2d2d5e;
+}
+
+.kaart-achter img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kaart-voor {
+    transform: rotateY(180deg);
+    background: white;
+    border: 3px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.kaart-voor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Feedback borders */
+.kaart.goed .kaart-voor    { border-color: #00e676; box-shadow: 0 0 12px #00e676aa; }
+.kaart.fout .kaart-voor    { border-color: #ff1744; box-shadow: 0 0 12px #ff1744aa; }
+
+/* Gevonden: faded + no pointer */
+.kaart.gevonden {
+    cursor: default;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* Pop-in animation */
+.kaart {
+    animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* OVERLAY */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+}
+
+#overlay.hidden { display: none; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+#overlayBox {
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: 24px;
+    padding: 48px 56px;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(124, 106, 255, 0.3);
+}
+
+#overlayEmoji { font-size: 3.5rem; margin-bottom: 12px; }
+#overlayBox h2 { font-size: 2.2rem; font-weight: 900; margin-bottom: 8px; }
+#overlayBox p  { color: var(--muted); margin-bottom: 28px; font-size: 1.05rem; }
+#overlayBox strong { color: var(--text); }
+#overlayBtn { font-size: 1rem; padding: 12px 32px; }
+
+/* Stagger animation delays */
+.kaart:nth-child(1)  { animation-delay: 0.02s; }
+.kaart:nth-child(2)  { animation-delay: 0.04s; }
+.kaart:nth-child(3)  { animation-delay: 0.06s; }
+.kaart:nth-child(4)  { animation-delay: 0.08s; }
+.kaart:nth-child(5)  { animation-delay: 0.10s; }
+.kaart:nth-child(6)  { animation-delay: 0.12s; }
+.kaart:nth-child(7)  { animation-delay: 0.14s; }
+.kaart:nth-child(8)  { animation-delay: 0.16s; }
+.kaart:nth-child(9)  { animation-delay: 0.18s; }
+.kaart:nth-child(10) { animation-delay: 0.20s; }
+.kaart:nth-child(11) { animation-delay: 0.22s; }
+.kaart:nth-child(12) { animation-delay: 0.24s; }

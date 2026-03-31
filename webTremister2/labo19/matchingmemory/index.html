@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Memory</h1>
+            <div id="stats">
+                <span>Pogingen: <strong id="pogingen">0</strong></span>
+                <span>Gevonden: <strong id="gevonden">0</strong> / 6</span>
+            </div>
+            <button id="newGameBtn">Nieuw spel</button>
+        </header>
+
+        <div id="speelveld"></div>
+
+        <div id="overlay" class="hidden">
+            <div id="overlayBox">
+                <div id="overlayEmoji">🎉</div>
+                <h2>Gewonnen!</h2>
+                <p>Jij had <strong id="finalPogingen">0</strong> pogingen nodig.</p>
+                <button id="overlayBtn">Opnieuw spelen</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/code.js"></script>
+</body>
+</html>
