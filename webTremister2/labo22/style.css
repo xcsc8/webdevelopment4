@@ -1,0 +1,71 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.btn-go {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    padding: 12px;
+}
+
+.btn-go:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* Card theme colors */
+.card-google .card-header {
+    background-color: #4285F4;
+    color: white;
+    font-weight: bold;
+}
+
+.card-youtube .card-header {
+    background-color: #FF0000;
+    color: white;
+    font-weight: bold;
+}
+
+.card-x .card-header {
+    background-color: #1DA1F2;
+    color: white;
+    font-weight: bold;
+}
+
+.card-instagram .card-header {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    font-weight: bold;
+}
+
+.card-google .btn-card {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+}
+
+.card-youtube .btn-card {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+}
+
+.card-x .btn-card {
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+}
+
+.card-instagram .btn-card {
+    background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+    color: white;
+    border: none;
+}
+
+#history-section {
+    margin-top: 30px;
+}
