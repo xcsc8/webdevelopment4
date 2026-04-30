@@ -1,71 +1,82 @@
 body {
-    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.btn-go {
-    background-color: #28a745;
-    color: white;
+.container {
     width: 100%;
-    font-weight: bold;
-    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.sectie {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1a73e8;
+    font-size: 1.2rem;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Zorgt dat padding de breedte niet beïnvloedt */
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
     border: none;
-    padding: 12px;
-}
-
-.btn-go:hover {
-    background-color: #218838;
+    border-radius: 6px;
+    background-color: #1a73e8;
     color: white;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-/* Card theme colors */
-.card-google .card-header {
-    background-color: #4285F4;
-    color: white;
-    font-weight: bold;
+button:hover {
+    background-color: #1557b0;
 }
 
-.card-youtube .card-header {
-    background-color: #FF0000;
-    color: white;
-    font-weight: bold;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.card-x .card-header {
-    background-color: #1DA1F2;
-    color: white;
-    font-weight: bold;
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
 }
 
-.card-instagram .card-header {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    color: white;
-    font-weight: bold;
-}
-
-.card-google .btn-card {
-    background-color: #4285F4;
-    color: white;
-    border: none;
-}
-
-.card-youtube .btn-card {
-    background-color: #FF0000;
-    color: white;
-    border: none;
-}
-
-.card-x .btn-card {
-    background-color: #1DA1F2;
-    color: white;
-    border: none;
-}
-
-.card-instagram .btn-card {
-    background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-    color: white;
-    border: none;
-}
-
-#history-section {
-    margin-top: 30px;
+li:last-child {
+    border-bottom: none;
 }
